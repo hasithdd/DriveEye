@@ -1,4 +1,6 @@
 Dataset/
+Dataset1/
+
 Training/runs/
 
 __pycache__/
@@ -24,3 +26,21 @@ Thumbs.db
 
 .vscode/
 .idea/
+Training/runs/detect/train/results.csv
+
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+*.wmv
+
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
