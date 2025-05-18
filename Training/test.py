@@ -37,9 +37,9 @@ def run_predictions(model_path: str, test_images_path: str, output_folder: str, 
 
 if __name__ == "__main__":
     # Configuration
-    MODEL_PATH = "/home/hasith/Personal/DriveEye/Training/runs/detect/train/weights/best.pt"  # Path to the best model
-    TEST_IMAGES_PATH = "/home/hasith/Personal/DriveEye/Dataset/test/images"
-    OUTPUT_FOLDER = "/home/hasith/Personal/DriveEye/Training/runs/detect/test_predictions"
+    MODEL_PATH = "/runs/detect/train/weights/best.pt"  # Path to the best model
+    TEST_IMAGES_PATH = "../Dataset1/test/images"
+    OUTPUT_FOLDER = "/runs/detect/test_predictions"
     OUTPUT_NAME = "test_results"
 
     run_predictions(MODEL_PATH, TEST_IMAGES_PATH, OUTPUT_FOLDER, OUTPUT_NAME)

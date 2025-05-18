@@ -37,7 +37,7 @@ def train_model(model_path: str, data_path: str, epochs: int, img_size: int):
 
 if __name__ == "__main__":
     MODEL_PATH = "yolo11s.pt"
-    DATA_PATH = "/home/hasith/Personal/DriveEye/Dataset/data.yaml"
+    DATA_PATH = "../Dataset1/data.yaml"
     EPOCHS = 200
     IMG_SIZE = 640
 
