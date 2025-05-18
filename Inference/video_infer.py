@@ -12,7 +12,7 @@ def run_inference():
     FRAME_THRESHOLD = int(FPS * SECS_THRESHOLD)
 
     buffer = deque(maxlen=FRAME_THRESHOLD)
-    engine = InferenceEngine("../Models/best.engine")
+    engine = InferenceEngine("./Models/best.engine")
     cap = cv2.VideoCapture(0)
 
     while cap.isOpened():
@@ -33,7 +33,7 @@ def run_inference():
             if cls_name == "drowsy":
                 drowsy_this_frame = True
 
-            if conf > 0.90:
+            if conf > 0.95:
                 save_sample(frame, cls_name)
 
         buffer.append(drowsy_this_frame)
