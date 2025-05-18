@@ -1,9 +1,14 @@
 from ultralytics import YOLO
 
-model = YOLO("../Training/runs/detect/train/weights/best.pt") 
+# Load PyTorch-trained model
+model = YOLO("../Training/runs/detect/train/weights/best.pt")
 
-model.export(format="engine")  
+# Export to TensorRT
+model.export(format="engine")  # produces best.engine in root directory
 
-tensorrt_model = YOLO("best.engine")
+# Load and test engine
+tensorrt_model = YOLO("../Models/best.engine")
+results = tensorrt_model("../Training/testing.mp4", conf=0.5, show=True)
 
-
+results.save("output_results.mp4")
+results.show()
