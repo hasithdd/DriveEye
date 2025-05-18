@@ -5,8 +5,8 @@ import os
 
 model = YOLO("/runs/detect/train/weights/best.pt")
 video_path = "testing.mp4"
-# web_cam = 0  # Use 0 for the default webcam
-cap = cv2.VideoCapture(video_path)
+web_cam = 0  # Use 0 for the default webcam
+cap = cv2.VideoCapture(web_cam)
 
 fps = cap.get(cv2.CAP_PROP_FPS)
 frames_threshold = int(fps * 3)  # 3 seconds worth of frames
@@ -38,7 +38,7 @@ while cap.isOpened():
         cls_id = int(cls_id)
         cls_name = results[0].names[cls_id]
 
-        if conf > 0.50 and cls_name != "Safe Driving":
+        if conf > 0.50 and cls_name != "not_drowsy":
             detected_classes_this_frame.add(cls_name)
             class_frame_counts[cls_name] = class_frame_counts.get(cls_name, 0) + 1
 
