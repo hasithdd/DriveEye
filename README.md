@@ -165,6 +165,3 @@ PRs and issue reports are welcome!
 
 ---
 
-## 📜 License
-
-Licensed under the [MIT License](LICENSE).
